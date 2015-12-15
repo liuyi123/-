@@ -15,6 +15,11 @@
 		AD7D684C1C1EB70600528861 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD7D684A1C1EB70600528861 /* LaunchScreen.storyboard */; };
 		AD7D68571C1EB70700528861 /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7D68561C1EB70700528861 /* ____Tests.m */; };
 		AD7D68621C1EB70700528861 /* ____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7D68611C1EB70700528861 /* ____UITests.m */; };
+		AD7D68711C1EB84200528861 /* MainTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7D68701C1EB84200528861 /* MainTabViewController.m */; };
+		AD7D68741C1EB94000528861 /* LYTableBar.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7D68731C1EB94000528861 /* LYTableBar.m */; };
+		AD7D68771C1EB9F800528861 /* LYTableButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7D68761C1EB9F800528861 /* LYTableButton.m */; };
+		AD7D687D1C1ED06400528861 /* MainPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7D687C1C1ED06400528861 /* MainPageVC.m */; };
+		AD7D68801C1ED28400528861 /* LifeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7D687F1C1ED28400528861 /* LifeVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,16 @@
 		AD7D685D1C1EB70700528861 /* 小志哥哥UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "小志哥哥UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD7D68611C1EB70700528861 /* ____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____UITests.m"; sourceTree = "<group>"; };
 		AD7D68631C1EB70700528861 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD7D686F1C1EB84200528861 /* MainTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabViewController.h; sourceTree = "<group>"; };
+		AD7D68701C1EB84200528861 /* MainTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabViewController.m; sourceTree = "<group>"; };
+		AD7D68721C1EB94000528861 /* LYTableBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTableBar.h; sourceTree = "<group>"; };
+		AD7D68731C1EB94000528861 /* LYTableBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTableBar.m; sourceTree = "<group>"; };
+		AD7D68751C1EB9F800528861 /* LYTableButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTableButton.h; sourceTree = "<group>"; };
+		AD7D68761C1EB9F800528861 /* LYTableButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTableButton.m; sourceTree = "<group>"; };
+		AD7D687B1C1ED06400528861 /* MainPageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainPageVC.h; sourceTree = "<group>"; };
+		AD7D687C1C1ED06400528861 /* MainPageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainPageVC.m; sourceTree = "<group>"; };
+		AD7D687E1C1ED28400528861 /* LifeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LifeVC.h; sourceTree = "<group>"; };
+		AD7D687F1C1ED28400528861 /* LifeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LifeVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +120,16 @@
 				AD7D68401C1EB70600528861 /* AppDelegate.m */,
 				AD7D68421C1EB70600528861 /* ViewController.h */,
 				AD7D68431C1EB70600528861 /* ViewController.m */,
+				AD7D686F1C1EB84200528861 /* MainTabViewController.h */,
+				AD7D68701C1EB84200528861 /* MainTabViewController.m */,
+				AD7D687B1C1ED06400528861 /* MainPageVC.h */,
+				AD7D687C1C1ED06400528861 /* MainPageVC.m */,
+				AD7D687E1C1ED28400528861 /* LifeVC.h */,
+				AD7D687F1C1ED28400528861 /* LifeVC.m */,
+				AD7D68721C1EB94000528861 /* LYTableBar.h */,
+				AD7D68731C1EB94000528861 /* LYTableBar.m */,
+				AD7D68751C1EB9F800528861 /* LYTableButton.h */,
+				AD7D68761C1EB9F800528861 /* LYTableButton.m */,
 				AD7D68451C1EB70600528861 /* Main.storyboard */,
 				AD7D68481C1EB70600528861 /* Assets.xcassets */,
 				AD7D684A1C1EB70600528861 /* LaunchScreen.storyboard */,
@@ -270,7 +295,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD7D68741C1EB94000528861 /* LYTableBar.m in Sources */,
 				AD7D68441C1EB70600528861 /* ViewController.m in Sources */,
+				AD7D687D1C1ED06400528861 /* MainPageVC.m in Sources */,
+				AD7D68711C1EB84200528861 /* MainTabViewController.m in Sources */,
+				AD7D68801C1ED28400528861 /* LifeVC.m in Sources */,
+				AD7D68771C1EB9F800528861 /* LYTableButton.m in Sources */,
 				AD7D68411C1EB70600528861 /* AppDelegate.m in Sources */,
 				AD7D683E1C1EB70600528861 /* main.m in Sources */,
 			);
@@ -413,7 +443,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "小志哥哥/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.puji.liuyi.----";
+				PRODUCT_BUNDLE_IDENTIFIER = com.puji.liuyi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -424,7 +454,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "小志哥哥/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.puji.liuyi.----";
+				PRODUCT_BUNDLE_IDENTIFIER = com.puji.liuyi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
