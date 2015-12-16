@@ -1,0 +1,139 @@
+//
+//  PrefixHeader.pch
+//  Ablum
+//
+//  Created by 曹石磊 on 15/4/2.
+//  Copyright (c) 2015年 Puji. All rights reserved.
+//
+
+#ifndef Ablum_PrefixHeader_pch
+#define Ablum_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif
+#ifdef __OBJC__
+
+#import "UIView+Frame.h"
+#import "UIImage+fixOrientation.h"
+//@"http://192.168.1.15/album"//
+#define BASE_URL                    @"http://www.1jiaplus.com/album"
+#define BASE_YOUPAI_IMAGE_URL       @"http://albumphoto.b0.upaiyun.com"
+#define UserId                      [AppDelegate instance].userInfo.userId
+//#ifdef DEBUG
+#define NSLog(fmt, ...)                                                              \
+do {                                                                             \
+NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__); \
+} while (0)
+//#else
+//#define NSLog(fmt, ...) do{ NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);}while(0)
+//#define NSLog(...)  do{}while(0)
+//#endif
+
+
+//屏幕宽高
+#define SCREEN_BOUNDS [UIScreen mainScreen].bounds
+#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+//OS版本
+#define iOS8 ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0)
+#define iOS7 [[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0
+
+#define XCUploadTypeImage           @"photo"
+#define XCUploadTypeVideo           @"video"
+#define XCUploadTypeVideoCover      @"videoCover"
+#define XCUploadTypeBackgroundImage @"backgroundImage"
+#define XCUploadTypeIcon            @"icon"
+
+//设备判别
+#define IS_IPHONE_5 (fabs((double) [[UIScreen mainScreen] bounds].size.height - (double) 568) < DBL_EPSILON)
+#define IS_IPHONE_6 (fabs((double) [[UIScreen mainScreen] bounds].size.height - (double) 667) < DBL_EPSILON)
+#define IS_IPHONE_6P (fabs((double) [[UIScreen mainScreen] bounds].size.height - (double) 736) < DBL_EPSILON)
+
+
+/* 用户设置key */
+#define user_default_key_ring @"ring"
+#define user_default_key_vibrate @"vibrate"
+#define user_default_key_system_sound @"systemSound"
+
+#define USER_ZONE @"zone"
+#define AREA_CODENUMBER @"areaCodeNumber"
+#define USER_VERSION @"version"
+#define USER_FRIENDS @"phones"
+#define USER_ACCOUNT @"phone"
+#define USER_PASSWOERD @"password"
+#define USER_NEWPASSWORD @"newPassword"
+#define USER_INVITE_FRIENDS_LINK @"link"
+#define USER_INVITE_FAMILY_CODE @"code"
+#define USER_CHECK_CODE @"code"
+#define USER_ICON @"icon"
+#define USER_BACK_Pic @"backPic"
+#define BPUSH_CHANNELID @"channelId"
+#define BPUSH_USERID @"pushUserId "
+#define HOUSECODE @"houseCode"
+//颜色相关
+#define RGBACOLOR16(rgbValue, a) [UIColor colorWithRed:((float) ((rgbValue & 0xFF0000) >> 16)) / 255.0 green:((float) ((rgbValue & 0xFF00) >> 8)) / 255.0 blue:((float) (rgbValue & 0xFF)) / 255.0 alpha:a]
+#define RGBACOLOR(r, g, b, a) [UIColor colorWithRed:(r) / 255.0 green:(g) / 255.0 blue:(b) / 255.0 alpha:(a)]
+#define DEFAULT_BLUE [UIColor colorWithRed:56 / 255.0 green:192 / 255.0 blue:254 / 255.0 alpha:1.0]
+#define TABBAR_BGCOLOR RGBACOLOR16(0xf8f8f8, 1)
+#define tintBlue RGBACOLOR16(0x007efe, 1)
+
+#define XCTimelineCellBackColor [UIColor colorWithRed:232 / 255.0 green:233 / 255.0 blue:236 / 255.0 alpha:1.0]
+
+#define kUserBackgroundImage        @"top_bg.jpg"
+#define kChildBackgroundImage       @"个人资料背景图.jpg"
+#define kDefaultPhotoImage          @"assets_placeholder_picture"
+
+#pragma NSNotificationCenter
+//tabbar上点击加号按钮的通知
+#define XCAddBtnClickNote                           @"addBtnClickNote"
+//选择孩子的通知
+#define XCChickBabyClickNote                        @"chickBabyClickNote"
+
+////上传完 身高、体重 接受通知 刷新数据
+#define XCUpLoadChileheightOrWeightSuccess          @"UpLoadChileheightOrWeightSuccess"
+#define XCCheckAllCalendarImage                     @"checkAllCalendarImage"
+#define XCSetup                                     @"setup"
+#define XCPraise                                    @"praise"
+#define XCInPutComment                              @"InPutComment"
+#define XCShowImageUsePhotoBowser                   @"ShowImageUsePhotoBowser"
+#define XCMessageSetup                              @"messageSetup"
+#define XCMessagePraise                             @"messagePraise"
+#define XCMessageInPutComment                       @"messageInPutComment"
+#define XCMessageShowImageUsePhotoBowser            @"messageShowImageUsePhotoBowser"
+#define XCBitImageToShowImageUsePhotoBowser         @"BitImageToShowImageUsePhotoBowser"
+//监听 点击编辑
+#define XCNewsSetup                                 @"newsSetup"
+//监听 点赞
+#define XCNewsPraise                                @"newsPraise"
+//监听 点击评论
+#define XCNewsInPutComment                          @"newsInPutComment"
+//点击预览图片通知
+#define XCNewsShowImageUsePhotoBowser               @"newsShowImageUsePhotoBowser"
+//从影集中删除照片
+#define DELETE_PHOTO                                @"deletePhotoFromYingJi"
+//查看 时间线图片
+#define CHECK_TIMELINE_IMAGE                        @"ShowImageUsePhotoBowser"
+//查看日历的所有图片
+#define CHECK_CANLENDAR_ALL_IMAGE                   @"checkAllCalendarImage"
+//上传完后 图片身高体重 更新
+#define UPDATE_DATE_WHENE_UP_IMAGE_HEIGET_WEIGHT    @"UpLoadChileheightOrWeightSuccess"
+
+#define XCGetAblumId                                @"getAblumId"
+//上传图片、身高、体重的时候通知dismiss掉modalview
+#define XCDismissModal                              @"dismissModal"
+//上传身高的控制器改变身高的时候传递给header改变label的值
+#define XCHeightSet                                 @"heightSet"
+//上传体重的控制器改变体重的时候传递给header改变label的值
+#define XCWeightSet                                 @"weightSet"
+//点击家庭弹出cover的时候隐藏tabbar通知
+#define XCHiddenTabbar                              @"hiddenTabbar"
+//再次点击家庭取消cover的时候显示tabbar通知
+#define XCShowTabbar                                @"showTabbar"
+//上传图片时选择相册的点击通知，通知传递ablumId和添加cheak标签
+#define XCUploadImagesCheakAblum                    @"uploadImagesCheakAblum"
+
+#define XCUploadIconOrBackGround                    @"update_icon_background"
+
+#endif

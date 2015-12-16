@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "ViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -16,10 +16,28 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];   //设置通用背景颜色
+    [self.window makeKeyAndVisible];
+    
+    ViewController  *vc=[[ViewController alloc]init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    self.window.rootViewController = nav;
+    
+    
+    //[self jumpToMain];
+   
+    
     // Override point for customization after application launch.
     return YES;
 }
+-(void)jumpToMain{
+    self.mainVC = [[MainTabViewController alloc] init];
+    self.leftVC = [[LeftSortsViewController alloc] init];
+    self.LeftSlideVC = [[LeftSlideViewController alloc] initWithLeftView:self.leftVC andMainView:self.mainVC];
+    self.window.rootViewController = self.LeftSlideVC;
 
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

@@ -20,6 +20,12 @@
 		AD7D68771C1EB9F800528861 /* LYTableButton.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7D68761C1EB9F800528861 /* LYTableButton.m */; };
 		AD7D687D1C1ED06400528861 /* MainPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7D687C1C1ED06400528861 /* MainPageVC.m */; };
 		AD7D68801C1ED28400528861 /* LifeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7D687F1C1ED28400528861 /* LifeVC.m */; };
+		AD8DCAAB1C2170E9004F5339 /* LeftSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8DCA9F1C2170E9004F5339 /* LeftSlideViewController.m */; };
+		AD8DCAAC1C2170E9004F5339 /* LeftSortsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8DCAA11C2170E9004F5339 /* LeftSortsViewController.m */; };
+		AD8DCAAD1C2170E9004F5339 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8DCAA31C2170E9004F5339 /* LoginVC.m */; };
+		AD8DCAAE1C2170E9004F5339 /* UIView_extra.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8DCAA61C2170E9004F5339 /* UIView_extra.m */; };
+		AD8DCAAF1C2170E9004F5339 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8DCAA81C2170E9004F5339 /* UIView+Frame.m */; };
+		AD8DCAB01C2170E9004F5339 /* UIView+JKPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8DCAAA1C2170E9004F5339 /* UIView+JKPicker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +72,20 @@
 		AD7D687C1C1ED06400528861 /* MainPageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainPageVC.m; sourceTree = "<group>"; };
 		AD7D687E1C1ED28400528861 /* LifeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LifeVC.h; sourceTree = "<group>"; };
 		AD7D687F1C1ED28400528861 /* LifeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LifeVC.m; sourceTree = "<group>"; };
+		AD8DCA9D1C2170E9004F5339 /* CommonDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDefine.h; sourceTree = "<group>"; };
+		AD8DCA9E1C2170E9004F5339 /* LeftSlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftSlideViewController.h; sourceTree = "<group>"; };
+		AD8DCA9F1C2170E9004F5339 /* LeftSlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftSlideViewController.m; sourceTree = "<group>"; };
+		AD8DCAA01C2170E9004F5339 /* LeftSortsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftSortsViewController.h; sourceTree = "<group>"; };
+		AD8DCAA11C2170E9004F5339 /* LeftSortsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftSortsViewController.m; sourceTree = "<group>"; };
+		AD8DCAA21C2170E9004F5339 /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
+		AD8DCAA31C2170E9004F5339 /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
+		AD8DCAA41C2170E9004F5339 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		AD8DCAA51C2170E9004F5339 /* UIView_extra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIView_extra.h; sourceTree = "<group>"; };
+		AD8DCAA61C2170E9004F5339 /* UIView_extra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIView_extra.m; sourceTree = "<group>"; };
+		AD8DCAA71C2170E9004F5339 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		AD8DCAA81C2170E9004F5339 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		AD8DCAA91C2170E9004F5339 /* UIView+JKPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JKPicker.h"; sourceTree = "<group>"; };
+		AD8DCAAA1C2170E9004F5339 /* UIView+JKPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JKPicker.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +150,20 @@
 				AD7D68731C1EB94000528861 /* LYTableBar.m */,
 				AD7D68751C1EB9F800528861 /* LYTableButton.h */,
 				AD7D68761C1EB9F800528861 /* LYTableButton.m */,
+				AD8DCA9D1C2170E9004F5339 /* CommonDefine.h */,
+				AD8DCA9E1C2170E9004F5339 /* LeftSlideViewController.h */,
+				AD8DCA9F1C2170E9004F5339 /* LeftSlideViewController.m */,
+				AD8DCAA01C2170E9004F5339 /* LeftSortsViewController.h */,
+				AD8DCAA11C2170E9004F5339 /* LeftSortsViewController.m */,
+				AD8DCAA21C2170E9004F5339 /* LoginVC.h */,
+				AD8DCAA31C2170E9004F5339 /* LoginVC.m */,
+				AD8DCAA41C2170E9004F5339 /* PrefixHeader.pch */,
+				AD8DCAA51C2170E9004F5339 /* UIView_extra.h */,
+				AD8DCAA61C2170E9004F5339 /* UIView_extra.m */,
+				AD8DCAA71C2170E9004F5339 /* UIView+Frame.h */,
+				AD8DCAA81C2170E9004F5339 /* UIView+Frame.m */,
+				AD8DCAA91C2170E9004F5339 /* UIView+JKPicker.h */,
+				AD8DCAAA1C2170E9004F5339 /* UIView+JKPicker.m */,
 				AD7D68451C1EB70600528861 /* Main.storyboard */,
 				AD7D68481C1EB70600528861 /* Assets.xcassets */,
 				AD7D684A1C1EB70600528861 /* LaunchScreen.storyboard */,
@@ -296,11 +330,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD7D68741C1EB94000528861 /* LYTableBar.m in Sources */,
+				AD8DCAB01C2170E9004F5339 /* UIView+JKPicker.m in Sources */,
 				AD7D68441C1EB70600528861 /* ViewController.m in Sources */,
 				AD7D687D1C1ED06400528861 /* MainPageVC.m in Sources */,
 				AD7D68711C1EB84200528861 /* MainTabViewController.m in Sources */,
 				AD7D68801C1ED28400528861 /* LifeVC.m in Sources */,
+				AD8DCAAF1C2170E9004F5339 /* UIView+Frame.m in Sources */,
+				AD8DCAAC1C2170E9004F5339 /* LeftSortsViewController.m in Sources */,
+				AD8DCAAD1C2170E9004F5339 /* LoginVC.m in Sources */,
+				AD8DCAAB1C2170E9004F5339 /* LeftSlideViewController.m in Sources */,
 				AD7D68771C1EB9F800528861 /* LYTableButton.m in Sources */,
+				AD8DCAAE1C2170E9004F5339 /* UIView_extra.m in Sources */,
 				AD7D68411C1EB70600528861 /* AppDelegate.m in Sources */,
 				AD7D683E1C1EB70600528861 /* main.m in Sources */,
 			);
@@ -526,6 +566,7 @@
 				AD7D68681C1EB70700528861 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AD7D68691C1EB70700528861 /* Build configuration list for PBXNativeTarget "小志哥哥Tests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +575,7 @@
 				AD7D686B1C1EB70700528861 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AD7D686C1C1EB70700528861 /* Build configuration list for PBXNativeTarget "小志哥哥UITests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +584,7 @@
 				AD7D686E1C1EB70700528861 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

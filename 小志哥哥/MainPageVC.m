@@ -7,24 +7,70 @@
 //
 
 #import "MainPageVC.h"
+#import "LeftSortsViewController.h"
+#import "LeftSlideViewController.h"
+#import "AppDelegate.h"
 
 @interface MainPageVC ()
-
+@property (strong, nonatomic) LeftSlideViewController *LeftSlideVC;
 @end
 
 @implementation MainPageVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor=[UIColor redColor];
-    // Do any additional setup after loading the view.
+    
+   // [self addMenuVC];
+    self.title = @"主界面";
+    self.view.backgroundColor = [UIColor whiteColor];
+    UIBarButtonItem *leftItem=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"menu"] style:UIBarButtonItemStylePlain target:self action:@selector(openOrCloseLeftList)];
+    leftItem.tintColor=[UIColor redColor];
+    self.navigationItem.leftBarButtonItem = leftItem;
+    
+//    UIButton *menuBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+//    menuBtn.frame = CGRectMake(0, 0, 20, 18);
+//    [menuBtn setBackgroundImage:[UIImage imageNamed:@"menu"] forState:UIControlStateNormal];
+//    [menuBtn addTarget:self action:@selector(openOrCloseLeftList) forControlEvents:UIControlEventTouchUpInside];
+//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:menuBtn];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    NSLog(@"viewWillDisappear");
+//    AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+//    [tempAppDelegate.LeftSlideVC setPanEnabled:NO];
+   
+   
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSLog(@"viewWillAppear");
+    MainTabViewController *tabVC = (MainTabViewController *)self.tabBarController;
+    [tabVC setCustomTabBarHide:NO];
+    
+    
+    AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+     tempAppDelegate.leftVC.leftViewHideDelegate=self;
+    [tempAppDelegate.LeftSlideVC setPanEnabled:YES];
+}
+
+- (void) openOrCloseLeftList
+{
+    
+    AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    if (tempAppDelegate.LeftSlideVC.closed)
+    {
+        [tempAppDelegate.LeftSlideVC openLeftView];
+    }
+    else
+    {
+        [tempAppDelegate.LeftSlideVC closeLeftView];
+    }
+}
 /*
 #pragma mark - Navigation
 

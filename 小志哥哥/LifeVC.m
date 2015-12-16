@@ -7,7 +7,8 @@
 //
 
 #import "LifeVC.h"
-
+#import "MainTabViewController.h"
+#import "AppDelegate.h"
 @interface LifeVC ()
 
 @end
@@ -17,14 +18,53 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor=[UIColor blueColor];
+    self.view.backgroundColor = [UIColor whiteColor];
+    UIBarButtonItem *leftItem=[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"menu"] style:UIBarButtonItemStylePlain target:self action:@selector(openOrCloseLeftList)];
+    leftItem.tintColor=[UIColor redColor];
+    self.navigationItem.leftBarButtonItem = leftItem;
+    
     // Do any additional setup after loading the view.
 }
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    NSLog(@"viewWillDisappear");
+    AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [tempAppDelegate.LeftSlideVC setPanEnabled:NO];
+    
+    
+}
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSLog(@"viewWillAppear");
+    MainTabViewController *tabVC = (MainTabViewController *)self.tabBarController;
+    [tabVC setCustomTabBarHide:NO];
+    
+    
+    AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    tempAppDelegate.leftVC.leftViewHideDelegate=self;
+    [tempAppDelegate.LeftSlideVC setPanEnabled:YES];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+- (void) openOrCloseLeftList
+{
+    
+    AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    if (tempAppDelegate.LeftSlideVC.closed)
+    {
+        [tempAppDelegate.LeftSlideVC openLeftView];
+    }
+    else
+    {
+        [tempAppDelegate.LeftSlideVC closeLeftView];
+    }
+}
 /*
 #pragma mark - Navigation
 

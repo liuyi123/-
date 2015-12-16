@@ -10,35 +10,40 @@
 #import "LYTableBar.h"
 #import "MainPageVC.h"
 #import "LifeVC.h"
+#import "LeftSortsViewController.h"
 #define XCTabBarBackgroungColor [UIColor colorWithRed:241 / 255.0 green:241 / 255.0 blue:241 / 255.0 alpha:1]
 #define XCTabBarBorderColor [[UIColor colorWithRed:178 / 255.0 green:178 / 255.0 blue:178 / 255.0 alpha:1] CGColor]
 @interface MainTabViewController ()
 @property(nonatomic,strong)NSMutableArray *itmes;
+@property(nonatomic,strong)LYTableBar *customTabbar;
 @end
 
 @implementation MainTabViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor=[UIColor yellowColor];
     [self setUpAllChildVC];
     
-    LYTableBar *tableBar=[[LYTableBar alloc]initWithFrame:self.tabBar.frame];
-    tableBar.items=self.itmes;
+    
+    self.customTabbar=[[LYTableBar alloc]initWithFrame:self.tabBar.frame];
+    self.customTabbar.items=self.itmes;
     __weak typeof(self) weakself = self;
-    tableBar.tableBarBlock=^(NSInteger selectedIndex){
+    self.customTabbar.tableBarBlock=^(NSInteger selectedIndex){
         if (selectedIndex==2) {
             return;
         }
         weakself.selectedIndex=selectedIndex;
     
     };
-
-    [self.view addSubview:tableBar];
+    
+    [self.view addSubview:self.customTabbar];
     [self.tabBar removeFromSuperview];
     
     
     
+}
+-(void)setCustomTabBarHide:(BOOL)hidden{
+    self.customTabbar.hidden = hidden;
 }
 - (void)setUpAllChildVC{
     

@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MainTabViewController : UITabBarController
-
+-(void)setCustomTabBarHide:(BOOL)hidden;
 @end
