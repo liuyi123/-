@@ -11,6 +11,11 @@
 #import "UIView+JKPicker.h"
 #import "UIView+Frame.h"
 #import "AppDelegate.h"
+#import "CCRequest.h"
+
+#import "AFHTTPRequestOperationManager.h"
+#import "JSONKit.h"
+#import "KVNProgress.h"
 @interface LoginVC ()
 /**
  *  整个界面的背景图片
@@ -50,7 +55,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-     self.navigationController.navigationBarHidden=NO;
+    // self.navigationController.navigationBarHidden=NO;
     [self setUpSubviews];
     // Do any additional setup after loading the view.
 }
@@ -67,6 +72,8 @@
     [self pwdField];
     [self loginBtn];
     [self forgetPwdBtn];
+    self.accountField.text = [[NSUserDefaults standardUserDefaults] objectForKey:USER_ACCOUNT];
+    self.pwdField.text = [[NSUserDefaults standardUserDefaults] objectForKey:USER_PASSWOERD];
 }
 #pragma mark - getter
 -(UIImageView *)backgroundImageView{
@@ -128,7 +135,7 @@
         _pwdField = [[UITextField alloc]initWithFrame:CGRectMake(pwdFieldX, pwdFieldY, pwdFieldW, pwdFieldH)];
         _pwdField.placeholder = @"请输入密码";
         _pwdField.borderStyle = UITextBorderStyleNone;
-        _pwdField.clearButtonMode = UITextFieldViewModeWhileEditing;
+        _pwdField.clearButtonMode = UITextFieldViewModeNever;
         _pwdField.secureTextEntry = YES;
         [self.loginBackgroundView addSubview:_pwdField];
     }
@@ -136,8 +143,72 @@
 }
 //跳转到主页面
 - (void)jumpToMainVc:(UIButton*)btn {
-    AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [tempAppDelegate jumpToMain];
+    
+    [[CCRequest shareCCRequest] loginWithName:self.accountField.text andPwd:self.pwdField.text andHousesID:@"27" andCallBack:^(id obj) {
+        
+            [[NSUserDefaults standardUserDefaults] setObject:self.pwdField.text forKey:USER_PASSWOERD];
+            [[NSUserDefaults standardUserDefaults] setObject:self.accountField.text forKey:USER_ACCOUNT];
+        
+        
+            NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+            [defaults setBool:YES forKey:@"autoSignIn"];
+            [defaults synchronize];
+
+        
+            AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+            [tempAppDelegate jumpToMain];
+        
+    }];
+    
+
+//     NSDictionary* dic = @{@"Method":@"user.getmygroupblist",
+//                           @"Page":@"1",
+//                           @"PageNum":@"10",
+//                           @"UserID":@"10930",
+//                           };
+//    
+//    AFHTTPRequestOperationManager* manager = [AFHTTPRequestOperationManager manager];
+//    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+//    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+//    [manager POST:RequestURL parameters:dic success:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        NSLog(@"opernation: %@\nresponse: %@", operation, responseObject);
+//    NSDictionary* dic = [responseObject objectFromJSONData];
+//        
+//        
+//        if (dic && [dic[@"Status"] intValue] != 0) {
+//            
+//        
+//        }
+//        
+//    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+//        
+//         [KVNProgress dismiss];
+//         [[[UIAlertView alloc]initWithTitle:@"提示" message:error.domain delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil] show];
+// 
+//    }];
+    
+    
+   
+//    [[CCRequest shareCCRequest] postRequestWithdParameters:dic andCallBack:^(id obj) {
+//        
+//        
+//        
+//    } andErrorHandle:^(NSError* error) {
+//   
+//        [[[UIAlertView alloc]initWithTitle:@"提示" message:error.domain delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil] show];
+//        
+//    }];
+//
+//    [[NSUserDefaults standardUserDefaults] setObject:self.pwdField.text forKey:USER_PASSWOERD];
+//    [[NSUserDefaults standardUserDefaults] setObject:self.accountField.text forKey:USER_ACCOUNT];
+ 
+    
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    [defaults setBool:YES forKey:@"autoSignIn"];
+//    [defaults synchronize];
+//    
+//    AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+//    [tempAppDelegate jumpToMain];
     
     //    MainTabViewController *TabBarVc = [[MainTabViewController alloc] init];
     //

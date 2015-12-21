@@ -31,7 +31,7 @@
     [super viewDidLoad];
     self.title=@"刘熠";
     
-    self.navigationController.navigationBarHidden=YES;
+   // self.navigationController.navigationBarHidden=YES;
     [self setUpSubViews];
 //    UIButton *btn=[UIButton buttonWithType:UIButtonTypeSystem];
 //    btn.frame=CGRectMake(self.view.bounds.size.width/2-100, self.view.bounds.size.height/2-20, 200, 40);

@@ -14,7 +14,7 @@
 #define XCTabBarBorderColor [[UIColor colorWithRed:178 / 255.0 green:178 / 255.0 blue:178 / 255.0 alpha:1] CGColor]
 @interface LYTableBar()
 //添加点击的tabbar的脚标按钮
-@property (nonatomic, weak) UIButton *selectedButton;
+@property (nonatomic, weak) LYTableButton *selectedButton;
 @end
 @implementation LYTableBar
 -(instancetype)initWithFrame:(CGRect)frame{
@@ -33,8 +33,10 @@
 
 -(void)setItems:(NSArray *)items{
     
+    _items=items;
     CGFloat buttnW=SCREEN_WIDTH/items.count;
     int i=0;
+    
     for (UITabBarItem *item in items) {
         LYTableButton *tableButton=[LYTableButton buttonWithType:UIButtonTypeCustom];
         tableButton.frame=CGRectMake(i*buttnW, 0, buttnW, self.frame.size.height);
@@ -52,8 +54,22 @@
 
 }
 
--(void)tabBarButtonClick:(UIButton *)btn{
+-(void)tabBarButtonClick:(LYTableButton *)btn{
+    
+//    for (id obj in self.subviews) {
+//        if ([obj isKindOfClass:[LYTableButton class]]) {
+//            LYTableButton *tableBtn=obj;
+//            if (tableBtn==btn) {
+//                tableBtn.selected=YES;
+//            }else{
+//                tableBtn.selected=NO;
+//            }
+//        }
+//        
+//    }
+    
     if (!btn.selected) {
+ 
         _selectedButton.selected = NO;
         btn.selected = YES;
         _selectedButton = btn;

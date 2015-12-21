@@ -22,7 +22,18 @@
     
     ViewController  *vc=[[ViewController alloc]init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-    self.window.rootViewController = nav;
+    
+     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults boolForKey:@"autoSignIn"]) {
+        
+        [self jumpToMain];
+    
+    }else{
+        self.window.rootViewController = nav;
+
+    
+    }
+    
     
     
     //[self jumpToMain];
@@ -30,6 +41,9 @@
     
     // Override point for customization after application launch.
     return YES;
+}
++(instancetype)instance{
+    return (AppDelegate *)[UIApplication sharedApplication].delegate;
 }
 -(void)jumpToMain{
     self.mainVC = [[MainTabViewController alloc] init];

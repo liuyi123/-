@@ -10,10 +10,16 @@
 #import "LeftSlideViewController.h"
 #import "LeftSortsViewController.h"
 #import "MainTabViewController.h"
+#import "CCUser.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
-
++(instancetype)instance;
 @property (strong, nonatomic) UIWindow *window;
+/*! @brief 注册个推后的cid
+ *
+ */
+@property(nonatomic,copy)NSString* getuiCid;
 
+@property(nonatomic,strong)CCUser* userInfo;
 
 @property (strong, nonatomic) LeftSlideViewController *LeftSlideVC;
 @property (strong, nonatomic) MainTabViewController *mainVC;

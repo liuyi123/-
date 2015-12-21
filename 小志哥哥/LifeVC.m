@@ -29,8 +29,8 @@
 {
     [super viewWillDisappear:animated];
     NSLog(@"viewWillDisappear");
-    AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [tempAppDelegate.LeftSlideVC setPanEnabled:NO];
+//    AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+//    [tempAppDelegate.LeftSlideVC setPanEnabled:NO];
     
     
 }

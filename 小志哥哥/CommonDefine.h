@@ -8,7 +8,8 @@
 
 #ifndef YouMe_CommonDefine_h
 #define YouMe_CommonDefine_h
-
+#define USER_PASSWOERD @"password"
+#define USER_ACCOUNT @"phone"
 //颜色相关
 #define RGBACOLOR16(rgbValue, a) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:a]
 #define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)]

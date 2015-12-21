@@ -9,6 +9,7 @@
 #import "LeftSortsViewController.h"
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "CommonDefine.h"
 @interface LeftSortsViewController () <UITableViewDelegate,UITableViewDataSource>
 
 @end
@@ -69,7 +70,7 @@
     } else if (indexPath.row == 6) {
         cell.textLabel.text = @"我的文件";
     }else if (indexPath.row == 7) {
-        cell.textLabel.text = @"设置";
+        cell.textLabel.text = @"退出登录";
     }
     return cell;
 }
@@ -78,15 +79,74 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
    
+    if (indexPath.row==0) {
+        ViewController *vc=[[ViewController alloc]init];
+        vc.hidesBottomBarWhenPushed=YES;
+        [self.leftViewHideDelegate.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row==7) {
+        
+
+        
+      UIAlertController *alertController=  [UIAlertController alertControllerWithTitle:@"提示" message:@"是否要注销当前账号?" preferredStyle:UIAlertControllerStyleAlert];
+        NSString *account  = [[NSUserDefaults standardUserDefaults] objectForKey:USER_ACCOUNT];
+        NSString *passwored = [[NSUserDefaults standardUserDefaults] objectForKey:USER_PASSWOERD];
+        
+        [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField){
+            textField.placeholder = @"登录";
+            textField.text=account;
+            NSLog(@"%@",textField.text);
+        }];
+        [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+            textField.placeholder = @"密码";
+            textField.text=passwored;
+            textField.secureTextEntry = YES;
+        }];
+        
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+            NSLog(@"The \"Okay/Cancel\" alert's cancel action occured.");
+        }];
+        
+        UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            
+            
+            UITextField *accountF = alertController.textFields.firstObject;
+            UITextField *passwordF = alertController.textFields.lastObject;
+            
+       
+            
+            if ([passwordF.text isEqualToString:passwored]&&[accountF.text isEqualToString:account]) {
+                NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                [defaults setBool:NO forKey:@"autoSignIn"];
+                [defaults synchronize];
+                ViewController *chooseVc = [[ViewController alloc] init];
+                UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:chooseVc];
+                [UIApplication sharedApplication].keyWindow.rootViewController = nav;
+            }
+            
+            
+        }];
+        
+        // Add the actions.
+        [alertController addAction:cancelAction];
+        [alertController addAction:otherAction];
+ 
+        [self presentViewController:alertController animated:YES completion:nil];
+//        [[[UIAlertView alloc]initWithTitle:@"提示" message:@"是否要注销当前账号?" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil] show];
+        
+        
+  
+        
+    }
     AppDelegate *tempAppDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    
-    ViewController *vc=[[ViewController alloc]init];
-    vc.hidesBottomBarWhenPushed=YES;
-    [self.leftViewHideDelegate.navigationController pushViewController:vc animated:YES];
     [tempAppDelegate.LeftSlideVC closeLeftView];//关闭左侧抽屉
   
 }
 
+//注销账号
+-(void)CancelAccount{
+ 
+
+}
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return 130;

@@ -28,7 +28,7 @@
         
         [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [self setTitleColor:[UIColor colorWithRed:0.4f green:0.75f blue:0.09f alpha:1] forState:UIControlStateSelected];
-        [self setTitleColor:[UIColor colorWithRed:0.4f green:0.75f blue:0.09f alpha:1] forState:UIControlStateDisabled];
+        [self setTitleColor:[UIColor colorWithRed:0.4f green:0.75f blue:0.09f alpha:1] forState:UIControlStateHighlighted];
         
         
         
@@ -56,9 +56,20 @@
     _item=item;
     [self setImage:item.image forState:UIControlStateNormal];
     [self setImage:item.selectedImage forState:UIControlStateSelected];
+    [self setImage:item.selectedImage forState:UIControlStateHighlighted];
     [self setTitle:item.title forState:UIControlStateNormal];
     
     
+
+}
+-(void)setSelected:(BOOL)selected{
+    if (selected) {
+        [self setImage:_item.selectedImage forState:UIControlStateNormal];
+        [self setTitleColor:[UIColor colorWithRed:0.4f green:0.75f blue:0.09f alpha:1] forState:UIControlStateNormal];
+    }else{
+        [self setImage:_item.image forState:UIControlStateNormal];
+        [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    }
 
 }
 /*
