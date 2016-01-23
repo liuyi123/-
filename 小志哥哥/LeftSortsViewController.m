@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "CommonDefine.h"
+#import "ScanningViewController.h"
 @interface LeftSortsViewController () <UITableViewDelegate,UITableViewDataSource>
 
 @end
@@ -19,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.view.backgroundColor=[UIColor grayColor];
     UIImageView *imageview = [[UIImageView alloc] initWithFrame:self.view.bounds];
     imageview.image = [UIImage imageNamed:@"leftbackiamge"];
     [self.view addSubview:imageview];
@@ -60,7 +61,7 @@
     } else if (indexPath.row == 1) {
         cell.textLabel.text = @"QQ钱包";
     } else if (indexPath.row == 2) {
-        cell.textLabel.text = @"网上营业厅";
+        cell.textLabel.text = @"扫一扫";
     } else if (indexPath.row == 3) {
         cell.textLabel.text = @"个性装扮";
     } else if (indexPath.row == 4) {
@@ -83,7 +84,14 @@
         ViewController *vc=[[ViewController alloc]init];
         vc.hidesBottomBarWhenPushed=YES;
         [self.leftViewHideDelegate.navigationController pushViewController:vc animated:YES];
-    }else if (indexPath.row==7) {
+    }
+    else if (indexPath.row==2) {
+        ScanningViewController *vc=[[ScanningViewController alloc]init];
+        vc.hidesBottomBarWhenPushed=YES;
+        [self.leftViewHideDelegate.navigationController pushViewController:vc animated:YES];
+        
+    }
+    else if (indexPath.row==7) {
         
 
         

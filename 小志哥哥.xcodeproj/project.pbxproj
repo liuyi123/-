@@ -15,6 +15,12 @@
 		AD335DA61C23E9EF00F16F24 /* CCRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AD335DA51C23E9EF00F16F24 /* CCRequest.m */; };
 		AD335DA91C23EE8700F16F24 /* CCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = AD335DA81C23EE8700F16F24 /* CCUser.m */; };
 		AD335DAC1C23EF1600F16F24 /* CCCommunity.m in Sources */ = {isa = PBXBuildFile; fileRef = AD335DAB1C23EF1600F16F24 /* CCCommunity.m */; };
+		AD710D6B1C5306F200349602 /* ScanningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD710D6A1C5306F200349602 /* ScanningViewController.m */; };
+		AD710D711C530A0D00349602 /* scanLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD710D6C1C530A0D00349602 /* scanLine@2x.png */; };
+		AD710D721C530A0D00349602 /* scanLine@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD710D6D1C530A0D00349602 /* scanLine@3x.png */; };
+		AD710D731C530A0D00349602 /* scanscanBg.png in Resources */ = {isa = PBXBuildFile; fileRef = AD710D6E1C530A0D00349602 /* scanscanBg.png */; };
+		AD710D741C530A0D00349602 /* tip.png in Resources */ = {isa = PBXBuildFile; fileRef = AD710D6F1C530A0D00349602 /* tip.png */; };
+		AD710D751C530A0D00349602 /* tip@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD710D701C530A0D00349602 /* tip@2x.png */; };
 		AD7D683E1C1EB70600528861 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7D683D1C1EB70600528861 /* main.m */; };
 		AD7D68411C1EB70600528861 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7D68401C1EB70600528861 /* AppDelegate.m */; };
 		AD7D68441C1EB70600528861 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7D68431C1EB70600528861 /* ViewController.m */; };
@@ -89,6 +95,13 @@
 		AD335DA81C23EE8700F16F24 /* CCUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCUser.m; sourceTree = "<group>"; };
 		AD335DAA1C23EF1600F16F24 /* CCCommunity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCommunity.h; sourceTree = "<group>"; };
 		AD335DAB1C23EF1600F16F24 /* CCCommunity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCommunity.m; sourceTree = "<group>"; };
+		AD710D691C5306F200349602 /* ScanningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanningViewController.h; sourceTree = "<group>"; };
+		AD710D6A1C5306F200349602 /* ScanningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanningViewController.m; sourceTree = "<group>"; };
+		AD710D6C1C530A0D00349602 /* scanLine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scanLine@2x.png"; sourceTree = "<group>"; };
+		AD710D6D1C530A0D00349602 /* scanLine@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scanLine@3x.png"; sourceTree = "<group>"; };
+		AD710D6E1C530A0D00349602 /* scanscanBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scanscanBg.png; sourceTree = "<group>"; };
+		AD710D6F1C530A0D00349602 /* tip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tip.png; sourceTree = "<group>"; };
+		AD710D701C530A0D00349602 /* tip@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tip@2x.png"; sourceTree = "<group>"; };
 		AD7D68391C1EB70600528861 /* 小志哥哥.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "小志哥哥.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD7D683D1C1EB70600528861 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AD7D683F1C1EB70600528861 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -225,6 +238,80 @@
 			path = "小志哥哥";
 			sourceTree = "<group>";
 		};
+		AD710D761C530CBD00349602 /* 左侧边栏 */ = {
+			isa = PBXGroup;
+			children = (
+				AD710D781C530D6000349602 /* 扫一扫 */,
+				AD8DCA9E1C2170E9004F5339 /* LeftSlideViewController.h */,
+				AD8DCA9F1C2170E9004F5339 /* LeftSlideViewController.m */,
+				AD8DCAA01C2170E9004F5339 /* LeftSortsViewController.h */,
+				AD8DCAA11C2170E9004F5339 /* LeftSortsViewController.m */,
+			);
+			name = "左侧边栏";
+			sourceTree = "<group>";
+		};
+		AD710D771C530CEB00349602 /* Main主界面 */ = {
+			isa = PBXGroup;
+			children = (
+				AD7D686F1C1EB84200528861 /* MainTabViewController.h */,
+				AD7D68701C1EB84200528861 /* MainTabViewController.m */,
+				AD7D687B1C1ED06400528861 /* MainPageVC.h */,
+				AD7D687C1C1ED06400528861 /* MainPageVC.m */,
+				AD7D68721C1EB94000528861 /* LYTableBar.h */,
+				AD7D68731C1EB94000528861 /* LYTableBar.m */,
+				AD7D68751C1EB9F800528861 /* LYTableButton.h */,
+				AD7D68761C1EB9F800528861 /* LYTableButton.m */,
+			);
+			name = "Main主界面";
+			sourceTree = "<group>";
+		};
+		AD710D781C530D6000349602 /* 扫一扫 */ = {
+			isa = PBXGroup;
+			children = (
+				AD710D691C5306F200349602 /* ScanningViewController.h */,
+				AD710D6A1C5306F200349602 /* ScanningViewController.m */,
+			);
+			name = "扫一扫";
+			sourceTree = "<group>";
+		};
+		AD710D791C530D9A00349602 /* 工具类 */ = {
+			isa = PBXGroup;
+			children = (
+				AD8DCA9D1C2170E9004F5339 /* CommonDefine.h */,
+				AD8DCAA41C2170E9004F5339 /* PrefixHeader.pch */,
+				AD8DCAA51C2170E9004F5339 /* UIView_extra.h */,
+				AD8DCAA61C2170E9004F5339 /* UIView_extra.m */,
+				AD8DCAA71C2170E9004F5339 /* UIView+Frame.h */,
+				AD8DCAA81C2170E9004F5339 /* UIView+Frame.m */,
+				AD8DCAA91C2170E9004F5339 /* UIView+JKPicker.h */,
+				AD8DCAAA1C2170E9004F5339 /* UIView+JKPicker.m */,
+			);
+			name = "工具类";
+			sourceTree = "<group>";
+		};
+		AD710D7A1C530DBB00349602 /* 图片 */ = {
+			isa = PBXGroup;
+			children = (
+				AD8DCAA21C2170E9004F5339 /* LoginVC.h */,
+				AD8DCAA31C2170E9004F5339 /* LoginVC.m */,
+				AD710D6C1C530A0D00349602 /* scanLine@2x.png */,
+				AD710D6D1C530A0D00349602 /* scanLine@3x.png */,
+				AD710D6E1C530A0D00349602 /* scanscanBg.png */,
+				AD710D6F1C530A0D00349602 /* tip.png */,
+				AD710D701C530A0D00349602 /* tip@2x.png */,
+			);
+			name = "图片";
+			sourceTree = "<group>";
+		};
+		AD710D7B1C530DDB00349602 /* 登录 */ = {
+			isa = PBXGroup;
+			children = (
+				AD7D68421C1EB70600528861 /* ViewController.h */,
+				AD7D68431C1EB70600528861 /* ViewController.m */,
+			);
+			name = "登录";
+			sourceTree = "<group>";
+		};
 		AD7D68301C1EB70600528861 = {
 			isa = PBXGroup;
 			children = (
@@ -247,34 +334,15 @@
 		AD7D683B1C1EB70600528861 /* 小志哥哥 */ = {
 			isa = PBXGroup;
 			children = (
+				AD710D7B1C530DDB00349602 /* 登录 */,
+				AD710D7A1C530DBB00349602 /* 图片 */,
+				AD710D791C530D9A00349602 /* 工具类 */,
+				AD710D771C530CEB00349602 /* Main主界面 */,
+				AD710D761C530CBD00349602 /* 左侧边栏 */,
 				AD7D683F1C1EB70600528861 /* AppDelegate.h */,
 				AD7D68401C1EB70600528861 /* AppDelegate.m */,
-				AD7D68421C1EB70600528861 /* ViewController.h */,
-				AD7D68431C1EB70600528861 /* ViewController.m */,
-				AD7D686F1C1EB84200528861 /* MainTabViewController.h */,
-				AD7D68701C1EB84200528861 /* MainTabViewController.m */,
-				AD7D687B1C1ED06400528861 /* MainPageVC.h */,
-				AD7D687C1C1ED06400528861 /* MainPageVC.m */,
 				AD7D687E1C1ED28400528861 /* LifeVC.h */,
 				AD7D687F1C1ED28400528861 /* LifeVC.m */,
-				AD7D68721C1EB94000528861 /* LYTableBar.h */,
-				AD7D68731C1EB94000528861 /* LYTableBar.m */,
-				AD7D68751C1EB9F800528861 /* LYTableButton.h */,
-				AD7D68761C1EB9F800528861 /* LYTableButton.m */,
-				AD8DCA9D1C2170E9004F5339 /* CommonDefine.h */,
-				AD8DCA9E1C2170E9004F5339 /* LeftSlideViewController.h */,
-				AD8DCA9F1C2170E9004F5339 /* LeftSlideViewController.m */,
-				AD8DCAA01C2170E9004F5339 /* LeftSortsViewController.h */,
-				AD8DCAA11C2170E9004F5339 /* LeftSortsViewController.m */,
-				AD8DCAA21C2170E9004F5339 /* LoginVC.h */,
-				AD8DCAA31C2170E9004F5339 /* LoginVC.m */,
-				AD8DCAA41C2170E9004F5339 /* PrefixHeader.pch */,
-				AD8DCAA51C2170E9004F5339 /* UIView_extra.h */,
-				AD8DCAA61C2170E9004F5339 /* UIView_extra.m */,
-				AD8DCAA71C2170E9004F5339 /* UIView+Frame.h */,
-				AD8DCAA81C2170E9004F5339 /* UIView+Frame.m */,
-				AD8DCAA91C2170E9004F5339 /* UIView+JKPicker.h */,
-				AD8DCAAA1C2170E9004F5339 /* UIView+JKPicker.m */,
 				AD7D68451C1EB70600528861 /* Main.storyboard */,
 				AD7D684A1C1EB70600528861 /* LaunchScreen.storyboard */,
 				ADAD60671C27B0A100EA2DFC /* Images.xcassets */,
@@ -463,8 +531,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADAD60681C27B0A100EA2DFC /* Images.xcassets in Resources */,
+				AD710D721C530A0D00349602 /* scanLine@3x.png in Resources */,
+				AD710D711C530A0D00349602 /* scanLine@2x.png in Resources */,
 				AD7D684C1C1EB70600528861 /* LaunchScreen.storyboard in Resources */,
+				AD710D751C530A0D00349602 /* tip@2x.png in Resources */,
+				AD710D731C530A0D00349602 /* scanscanBg.png in Resources */,
 				AD7D68471C1EB70600528861 /* Main.storyboard in Resources */,
+				AD710D741C530A0D00349602 /* tip.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +593,7 @@
 				ADAD60521C27AF1C00EA2DFC /* AFHTTPRequestOperationManager.m in Sources */,
 				ADAD60531C27AF1C00EA2DFC /* AFHTTPSessionManager.m in Sources */,
 				ADAD605A1C27AF1C00EA2DFC /* ChineseInclude.m in Sources */,
+				AD710D6B1C5306F200349602 /* ScanningViewController.m in Sources */,
 				AD8DCAAD1C2170E9004F5339 /* LoginVC.m in Sources */,
 				ADAD60581C27AF1C00EA2DFC /* AFURLResponseSerialization.m in Sources */,
 				ADAD60571C27AF1C00EA2DFC /* AFURLRequestSerialization.m in Sources */,
