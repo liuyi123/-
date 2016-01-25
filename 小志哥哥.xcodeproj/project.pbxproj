@@ -15,6 +15,13 @@
 		AD335DA61C23E9EF00F16F24 /* CCRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = AD335DA51C23E9EF00F16F24 /* CCRequest.m */; };
 		AD335DA91C23EE8700F16F24 /* CCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = AD335DA81C23EE8700F16F24 /* CCUser.m */; };
 		AD335DAC1C23EF1600F16F24 /* CCCommunity.m in Sources */ = {isa = PBXBuildFile; fileRef = AD335DAB1C23EF1600F16F24 /* CCCommunity.m */; };
+		AD5D42CB1C5616FD006E1181 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5D42CA1C5616FD006E1181 /* SystemConfiguration.framework */; };
+		AD5D42CD1C561709006E1181 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5D42CC1C561709006E1181 /* CoreTelephony.framework */; };
+		AD5D42CF1C561714006E1181 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5D42CE1C561714006E1181 /* QuartzCore.framework */; };
+		AD5D42D11C56171E006E1181 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5D42D01C56171E006E1181 /* CoreText.framework */; };
+		AD5D42D31C561727006E1181 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5D42D21C561727006E1181 /* CoreGraphics.framework */; };
+		AD5D42D51C56172F006E1181 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5D42D41C56172F006E1181 /* UIKit.framework */; };
+		AD5D42D71C561738006E1181 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5D42D61C561738006E1181 /* Foundation.framework */; };
 		AD710D6B1C5306F200349602 /* ScanningViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD710D6A1C5306F200349602 /* ScanningViewController.m */; };
 		AD710D711C530A0D00349602 /* scanLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD710D6C1C530A0D00349602 /* scanLine@2x.png */; };
 		AD710D721C530A0D00349602 /* scanLine@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD710D6D1C530A0D00349602 /* scanLine@3x.png */; };
@@ -95,6 +102,13 @@
 		AD335DA81C23EE8700F16F24 /* CCUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCUser.m; sourceTree = "<group>"; };
 		AD335DAA1C23EF1600F16F24 /* CCCommunity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCCommunity.h; sourceTree = "<group>"; };
 		AD335DAB1C23EF1600F16F24 /* CCCommunity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCCommunity.m; sourceTree = "<group>"; };
+		AD5D42CA1C5616FD006E1181 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		AD5D42CC1C561709006E1181 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		AD5D42CE1C561714006E1181 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		AD5D42D01C56171E006E1181 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		AD5D42D21C561727006E1181 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AD5D42D41C56172F006E1181 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AD5D42D61C561738006E1181 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AD710D691C5306F200349602 /* ScanningViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanningViewController.h; sourceTree = "<group>"; };
 		AD710D6A1C5306F200349602 /* ScanningViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanningViewController.m; sourceTree = "<group>"; };
 		AD710D6C1C530A0D00349602 /* scanLine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "scanLine@2x.png"; sourceTree = "<group>"; };
@@ -191,6 +205,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD5D42D71C561738006E1181 /* Foundation.framework in Frameworks */,
+				AD5D42D51C56172F006E1181 /* UIKit.framework in Frameworks */,
+				AD5D42D31C561727006E1181 /* CoreGraphics.framework in Frameworks */,
+				AD5D42D11C56171E006E1181 /* CoreText.framework in Frameworks */,
+				AD5D42CF1C561714006E1181 /* QuartzCore.framework in Frameworks */,
+				AD5D42CD1C561709006E1181 /* CoreTelephony.framework in Frameworks */,
+				AD5D42CB1C5616FD006E1181 /* SystemConfiguration.framework in Frameworks */,
 				AD335D431C23E38F00F16F24 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,6 +236,13 @@
 		AD335D481C23E44A00F16F24 /* framework */ = {
 			isa = PBXGroup;
 			children = (
+				AD5D42D61C561738006E1181 /* Foundation.framework */,
+				AD5D42D41C56172F006E1181 /* UIKit.framework */,
+				AD5D42D21C561727006E1181 /* CoreGraphics.framework */,
+				AD5D42D01C56171E006E1181 /* CoreText.framework */,
+				AD5D42CE1C561714006E1181 /* QuartzCore.framework */,
+				AD5D42CC1C561709006E1181 /* CoreTelephony.framework */,
+				AD5D42CA1C5616FD006E1181 /* SystemConfiguration.framework */,
 				ADAD60201C27AF1C00EA2DFC /* AFNetworking */,
 				ADAD60381C27AF1C00EA2DFC /* Categories */,
 				ADAD603F1C27AF1C00EA2DFC /* UIKit+AFNetworking */,
@@ -236,6 +264,13 @@
 			);
 			name = framework;
 			path = "小志哥哥";
+			sourceTree = "<group>";
+		};
+		AD5D42D81C56175C006E1181 /* 支付宝 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "支付宝";
 			sourceTree = "<group>";
 		};
 		AD710D761C530CBD00349602 /* 左侧边栏 */ = {
@@ -334,6 +369,7 @@
 		AD7D683B1C1EB70600528861 /* 小志哥哥 */ = {
 			isa = PBXGroup;
 			children = (
+				AD5D42D81C56175C006E1181 /* 支付宝 */,
 				AD710D7B1C530DDB00349602 /* 登录 */,
 				AD710D7A1C530DBB00349602 /* 图片 */,
 				AD710D791C530D9A00349602 /* 工具类 */,
@@ -746,8 +782,16 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/小志哥哥",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/小志哥哥",
+				);
 				INFOPLIST_FILE = "小志哥哥/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/小志哥哥",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.puji.liuyi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -761,8 +805,16 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/小志哥哥",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/小志哥哥",
+				);
 				INFOPLIST_FILE = "小志哥哥/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/小志哥哥",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.puji.liuyi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
